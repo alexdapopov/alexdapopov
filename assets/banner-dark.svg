@@ -1,0 +1,51 @@
+<svg width="2560" height="640" viewBox="0 0 2560 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Subtle vignette -->
+    <radialGradient id="vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1280 320) rotate(90) scale(360 1280)">
+      <stop offset="0" stop-color="#101316"/>
+      <stop offset="1" stop-color="#0A0C0E"/>
+    </radialGradient>
+
+    <!-- Chrome sheen for skyline edges -->
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D7D7D7"/>
+      <stop offset="0.5" stop-color="#8C8C8C"/>
+      <stop offset="1" stop-color="#5E5E5E"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2560" height="640" fill="url(#vignette)"/>
+
+  <!-- Horizon glow (very subtle) -->
+  <rect x="0" y="390" width="2560" height="4" fill="#BDBDBD" opacity="0.06"/>
+  <rect x="0" y="392" width="2560" height="1" fill="#FFFFFF" opacity="0.03" filter="url(#softGlow)"/>
+
+  <!-- Minimal skyline silhouette -->
+  <g opacity="0.10">
+    <rect x="180" y="260" width="60" height="160" fill="#FFFFFF"/>
+    <rect x="260" y="300" width="48" height="120" fill="#FFFFFF"/>
+    <rect x="330" y="240" width="54" height="180" fill="#FFFFFF"/>
+    <rect x="410" y="320" width="44" height="100" fill="#FFFFFF"/>
+    <rect x="490" y="280" width="56" height="140" fill="#FFFFFF"/>
+    <rect x="560" y="220" width="50" height="200" fill="#FFFFFF"/>
+    <rect x="640" y="305" width="52" height="115" fill="#FFFFFF"/>
+    <rect x="720" y="290" width="46" height="130" fill="#FFFFFF"/>
+    <rect x="800" y="250" width="58" height="170" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Chrome rim light along top edges of some buildings -->
+  <g opacity="0.25">
+    <rect x="560" y="220" width="50" height="4" fill="url(#chrome)"/>
+    <rect x="330" y="240" width="54" height="3" fill="url(#chrome)"/>
+    <rect x="800" y="250" width="58" height="3" fill="url(#chrome)"/>
+  </g>
+
+  <!-- Soft diagonal sheen -->
+  <path d="M0,520 L2560,420 L2560,640 L0,640 Z" fill="#FFFFFF" opacity="0.02"/>
+</svg>
